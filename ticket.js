@@ -55,7 +55,7 @@ module.exports = {
         }
     },
     create: function(reaction, user){
-        if(!(reaction.emoji.name == '🎟️' && reaction.message.id == '877260636176941077')) return;
+        if(!(reaction.emoji.name == '🎟️' && reaction.message.id == '877262701041180672')) return;
         if(reaction.message.guild.channels.cache.some(channel => 
             channel.name.toLowerCase().includes(user.id) &&
             channel.type == 'text'
