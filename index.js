@@ -4,6 +4,8 @@ const prefix = 't!'
 
 bot.on('ready', () => {
     console.log('Der Bot ist nun Online!')
+    bot.user.setActivity("Hallo",{type:"LISTENING"});
+})
 
     bot.user.setPresence({
         activity: {
@@ -11,7 +13,7 @@ bot.on('ready', () => {
             type: 'PLAYING',
         }
     })
-})
+
 
 bot.on('message', message => {
     let parts = message.content.split(" ");
