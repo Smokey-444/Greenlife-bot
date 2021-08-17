@@ -81,6 +81,9 @@ bot.on('message', message => {
 
         message.channel.send(embed)
     }
+const welcome = require("./welcome");
+
+  welcome(client);
 })
 
 bot.login(process.env.token)
