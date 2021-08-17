@@ -9,7 +9,7 @@ module.exports = {
       channel.setParent("849207631146385408");
   
       channel.updateOverwrite(message.guild.id, {
-        SEND_MESSAGE: true,
+        SEND_MESSAGE: false,
         VIEW_CHANNEL: false,
       });
       channel.updateOverwrite(message.author, {
