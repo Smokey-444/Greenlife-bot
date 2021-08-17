@@ -12,6 +12,10 @@ bot.on('ready', () => {
     })
 })
 
+.on('messageReactionAdd', (reaction, user) => {
+    if(user.bot) return;
+});
+
 bot.on('message', message => {
     let parts = message.content.split(" ");
 
