@@ -7,7 +7,7 @@ bot.on('ready', () => {
 
     bot.user.setPresence({
         activity: {
-            name: 't!help',
+            name: 't!server',
             type: 'PLAYING',
         }
     })
@@ -69,6 +69,15 @@ bot.on('message', message => {
         .addField('Brauchst du Hilfe?', 'Benutze t!help')
         .addField('Willst du dem Owner eine FA schicken?', `Hier der Name: **${message.guild.owner.user.tag}**`)
         .addField('Brauchst du bei sonst etwas Hilfe?', 'Wende dich an den Owner oder das Team')
+
+        message.channel.send(embed)
+    }
+    else if(message.content.includes('t!server')) {
+        const embed = new Discord.MessageEmbed()
+        .setColor('ff0000')
+        .setTitle('**Was gibts?**')
+        .addField('Brauchst du Hilfe beim Server?', 'Frag unser Team')
+        .addField('Du kommst nicht auf denn Server ?', 'Hier die IP  185.249.198.9:30484')
 
         message.channel.send(embed)
     }
